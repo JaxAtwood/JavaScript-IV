@@ -119,13 +119,13 @@ class ProjectManager extends Student {
     });
     const lisa = new Student ({
         name: "Lisa",
-        age: "",
-        location: "",
-        specialty: "",
-        faveLanguage: "",
-        catchPhrase: "",
+        age: "38",
+        location: "Damascus",
+        specialty: "driving",
+        faveLanguage: "French",
+        catchPhrase: "Oui, Oui",
         previousBackground: "Dancer",
-        className: "Web21",
+        className: "Web26",
         faveSubjects: [
             "Algorithms",
             "Javascript",
@@ -133,8 +133,8 @@ class ProjectManager extends Student {
             "PHP",
             "Ruby",
         ],
-        gradClassName: "",
-        faveInstructor: "",
+        gradClassName: "Wd5",
+        faveInstructor: "Dan",
     });
 //-----------------------------------------
     const bob = new ProjectManager ({
@@ -144,23 +144,21 @@ class ProjectManager extends Student {
         specialty: "React",
         faveLanguage: "Java",
         catchPhrase: "Yo, I'm the Teach",
-        previousBackground: "",
-        className: "",
-        faveSubjects: "",
-        gradClassName: "WD1",
+        previousBackground: "CEO",
+        className: "Web27",
+        gradClassName: "WD6",
         faveInstructor: "Paco",
     });
     const devin = new ProjectManager ({
-        name: "Devin",
-        age: "",
-        location: "",
-        specialty: "",
-        faveLanguage: "",
-        catchPhrase: "",
-        previousBackground: "",
-        className: "",
-        faveSubjects: "",
-        gradClassName: "WD2",
+        name: "Janet",
+        age: "66",
+        location: "Denver",
+        specialty: "git",
+        faveLanguage: "Jamaican",
+        catchPhrase: "Yah, man",
+        previousBackground: "Cashier",
+        className: "Web28",
+        gradClassName: "WD7",
         faveInstructor: "Hector",
     });
 //-----------------------------------------

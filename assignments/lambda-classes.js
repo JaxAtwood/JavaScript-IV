@@ -10,9 +10,7 @@ class Person {
     console.log(`Hello, my name is ${this.newName}, I am from ${this.newLocation}!`);
     }
 }
-
-
-//BE SURE TO VERIFY SUBJECT ARGUMENT WITHIN CONSTRUCTOR FUNCTION!!!!!
+//-------------------------------------------------------------------------
 class Instructor extends Person {
     constructor (child){
         super(child);
@@ -24,29 +22,30 @@ class Instructor extends Person {
     console.log(`Today, we are learning about ${subject}`);
     }
     grade(subject) {
-    console.log(`${Student.newName} receives a perfect score on ${subject}.`);
+    console.log(`${this.newName} receives a perfect score on ${subject}.`);
     }
 }
-
-class Student extends Instructor {
-    constructor (grandChild){
-        super(grandChild);
-        this.newPreviousBackground = grandChild.previousBackground;
-        this.newClassName = grandChild.className;
-        this.newFaveSubjects = grandChild.faveSubjects;
+//------------------------------------------------------------------------
+class Student extends Person {
+    constructor (child){
+        super(child);
+        this.newPreviousBackground = child.previousBackground;
+        this.newClassName = child.className;
+        this.newFaveSubjects = child.faveSubjects;
     }
     listsSubjects() {
-        for(var i = 0; i < this.favSubjects.length; i++){
-            console.log(this.favSubjects[i]);
-    }
-    PRAssignment() 
-        console.log(`${Student.newName} has submitted a PR for ${this.subject}`);
-    }
-    sprintChallenge() {
-        console.log(`${Student.newName} has begun sprint challenge on ${this.subject}.`);
+        for (let i = 0; i < faveSubjects.length; i++){
+            return (this.faveSubjects[i]);
     }
 }
-
+    prAssignment(subject){ 
+    console.log(`${this.newName} has submitted a PR for ${subject}`);
+    }
+    sprintChallenge(subject) {
+    console.log(`${this.newName} has begun sprint challenge on ${subject}`);
+    }
+}
+//---------------------------------------------------------------------------
 class ProjectManager extends Student {
     constructor (greatGrandChild){
         super(greatGrandChild);
@@ -56,45 +55,120 @@ class ProjectManager extends Student {
     standUp(slack) {
         console.log(`${this.newName} announces to ${slack}, @channel: Standy Times!`);
     }
-    debugsCode() {
-        console.log(`${this.newName} debugs ${Student.newName}'s code ${subject}.`);
+    debugsCode(subject) {
+        console.log(`${this.newName} debugs ${this.newName}'s code ${subject}.`);
     }
 }
-
-    const fred = new Instructor ({
+//-------------------------------------------------------------------------
+    const fred = new Person ({
         name: "Fred",
         age: 32,
         location: "Bedrock",
+        specialty: "teaching",
+        faveLanguage: "Spanish",
+        catchPhrase: "I'm awesome!",
+        previousBackground: "Swimming",
+        className: "Web22",
+        gradClassName: "Wd1",
+        faveInstructor: "Sean",
     });
-
+//---------------------------------------
+    const kaija = new Instructor ({
+        name: "Kaija",
+        age: 25,
+        location: "Hawaii",
+        specialty: "hotels",
+        faveLanguage: "Italian",
+        catchPhrase: "Yo, I'm the Teach",
+        previousBackground: "Jail",
+        className: "Web23",
+        gradClassName: "Wd2",
+        faveInstructor: "Paul",
+    });
     const jane = new Instructor ({
         name: "Jane",
-        age: 39,
-        location: "Tampa",
+        age: 46,
+        location: "Iceland",
+        specialty: "front-end development",
+        faveLanguage: "Greek",
+        catchPhrase: "Howdy! I'm your Professor",
+        previousBackground: "Chef",
+        className: "Web24",
+        gradClassName: "Wd3",
+        faveInstructor: "Nicky",
     });
-
+//----------------------------------------
     const nick = new Student ({
         name: "Nick",
-        age: 98,
-        location: "Manassas",
+        age: 76,
+        location: "Berlin",
+        specialty: "pizza making",
+        faveLanguage: "Swedish",
+        catchPhrase: "Get outta here",
+        previousBackground: "Hobo",
+        className: "Web25",
+        faveSubjects: [
+            "CSS",
+            "Java",
+            "C++",
+            "HTML",
+            "Python",
+        ],
+        gradClassName: "Wd4",
+        faveInstructor: "Joey",
     });
-
     const lisa = new Student ({
         name: "Lisa",
-        age: 76,
-        location: "San Diego",
+        age: "",
+        location: "",
+        specialty: "",
+        faveLanguage: "",
+        catchPhrase: "",
+        previousBackground: "Dancer",
+        className: "Web21",
+        faveSubjects: [
+            "Algorithms",
+            "Javascript",
+            "C#",
+            "PHP",
+            "Ruby",
+        ],
+        gradClassName: "",
+        faveInstructor: "",
     });
-
+//-----------------------------------------
     const bob = new ProjectManager ({
-        name: "Bob",
-        age: 26,
-        location: "Houston",
+        name: "Jeffrey",
+        age: 88,
+        location: "Jamaica",
+        specialty: "React",
+        faveLanguage: "Java",
+        catchPhrase: "Yo, I'm the Teach",
+        previousBackground: "",
+        className: "",
+        faveSubjects: "",
+        gradClassName: "WD1",
+        faveInstructor: "Paco",
     });
-
     const devin = new ProjectManager ({
         name: "Devin",
-        age: 34,
-        location: "Seattle",
+        age: "",
+        location: "",
+        specialty: "",
+        faveLanguage: "",
+        catchPhrase: "",
+        previousBackground: "",
+        className: "",
+        faveSubjects: "",
+        gradClassName: "WD2",
+        faveInstructor: "Hector",
     });
-
-    
+//-----------------------------------------
+    fred.speak();
+    kaija.demo("baking");
+    jane.grade("reading");
+    console.log(nick.newFaveSubjects);
+    lisa.prAssignment("bread");
+    nick.sprintChallenge("JS");
+    bob.standUp("Slack");
+    devin.debugsCode("node");

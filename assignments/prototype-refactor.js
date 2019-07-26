@@ -93,14 +93,13 @@ class Humanoid extends CharacterStats{
       language: 'Elvish',
     });
   
-
-    console.log(mage.newCreatedAt); // Today's date
-    console.log(archer.newDimensions); // { length: 1, width: 2, height: 4 }
-    console.log(swordsman.newhealthPoints); // 15
-    console.log(mage.newName); // Bruce
-    console.log(swordsman.newTeam); // The Round Table
-    console.log(mage.newWeapons); // Staff of Shamalama
-    console.log(archer.newLanguage); // Elvish
-    archer.greet(); // Lilith offers a greeting in Elvish.
-    mage.takeDamage(); // Bruce took damage.
-    swordsman.destroy(); // Sir Mustachio was removed from the game.
+    console.log(mage.newCreatedAt); 
+    console.log(archer.newDimensions); 
+    console.log(swordsman.newhealthPoints); 
+    console.log(mage.newName); 
+    console.log(swordsman.newTeam); 
+    console.log(mage.newWeapons); 
+    console.log(archer.newLanguage);
+    archer.greet(); 
+    mage.takeDamage(); 
+    swordsman.destroy(); 
